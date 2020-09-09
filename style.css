@@ -1,0 +1,38 @@
+body {
+    background-color: #f6f4e6;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button {
+    background-color: #fddb3a;
+    border: none;
+    margin: 10px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}
+
+.infos {
+    margin: auto;
+    width: 30%;
+    padding: 15px 30px;
+    text-align: center;
+
+}
+
+#main {
+    color: #52575d;
+    cursor: default;
+    font-family: 'Fredoka One', cursive;
+}
+
+#result {
+    color: #665a16;
+    cursor: default;
+    font-family: 'Fredoka One', cursive;
+}

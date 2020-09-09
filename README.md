@@ -1,2 +1,2 @@
 # rock-paper-scissors
-Terminal based rock paper scissors game for The Odin Project
+Rock-paper-scissors game on browser for The Odin Project with added GUI.

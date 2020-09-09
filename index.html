@@ -1,89 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <h1>Eyy It's good old Rock Paper Scissors!</h1>
-    <h2>To play, open the browser console and call "singleRound()" or "multipleRounds()" functions.</h2>
-    <script>
-        function singleRound() {
-            let randNum = Math.floor(Math.random() * Math.floor(3))
-            let computerSelection = 'none'
-            if (randNum == 0) {
-                computerSelection = 'rock'
-            }
-            else if (randNum == 1) {
-                computerSelection = 'paper'
-            }
-            else {
-                computerSelection = 'scissors'
-            }
-    
-            let playerSelection = prompt("Rock, Paper or Scissors?");
-    
-            console.log("You chose " + playerSelection)
-            console.log("Computer chose " + computerSelection)
-            
-            window.result = "none"
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+    </head>
+    <div class="flex-container">
+        <button id="rockbtn" class="button">ROCK</button>
+        <button id="paperbtn" class="button">PAPER</button>
+        <button id="scissorsbtn" class="button">SCISSORS</button>
+        <button id="startbtn" class="button">START NEW GAME</button>
+    </div>
+  
+    <div id="main" class="infos">
+    </div>
 
-            if (playerSelection == 'rock' && computerSelection == 'rock') {
-                console.log("You both chose rock, It is a tie!")
-                window.result = "tie"
-            }
-            else if (playerSelection == 'rock' && computerSelection == 'paper') {
-                console.log("Paper beats rock, you lose!")
-                window.result = "computer wins"
-            }
-            else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-                console.log("Rock beats scissors, you win!")
-                window.result = "player wins"
-            }
-            else if (playerSelection == 'paper' && computerSelection == 'rock') {
-                console.log("Paper beats rock, you win!")
-                window.result = "player wins"
-            }
-            else if (playerSelection == 'paper' && computerSelection == 'paper') {
-                console.log("You both chose paper, It is a tie!")
-            }
-            else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-                console.log("Scissors beat paper, you lose!")
-                window.result = "computer wins"
-            }
-            else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-                console.log("Rock beats scissors, you lose!")
-                window.result = "computer wins"
-            }
-            else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-                console.log("Scissors beat paper, you win!")
-                window.result = "player wins"
-            }
-            else if (playerSelection == 'scissors' && computerSelection == 'scissors') {
-                console.log("You both chose scissors, It is a tie!")
-                window.result = "tie"
-            }
-        }
-        function multipleRounds() {
-            let rounds = prompt("How many rounds would you like to play?")
-            let playerWins = 0
-            let computerWins = 0
-            while (rounds>0) {
-                singleRound()
-                if (window.result =="player wins") {
-                    playerWins++
-                    rounds--
-                    console.log("Player: " + playerWins)
-                    console.log("Computer: " + computerWins)
-                }
-                else if (window.result =="computer wins") {
-                    computerWins++
-                    rounds--
-                    console.log("Player: " + playerWins)
-                    console.log("Computer: " + computerWins)
-                }
-                else if (window.result =="tie") {
-                    rounds--
-                    console.log("Player: " + playerWins)
-                    console.log("Computer: " + computerWins)
-                }
-            }
-        }
-    </script>
-</html>
+    <div id="result" class="infos">
+    </div>
+    <script src="script.js"></script>
+    </html>
