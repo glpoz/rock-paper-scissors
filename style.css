@@ -1,7 +1,7 @@
 body {
     background-color: #f6f4e6;
 }
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 9000px) {
 
     .flex-container {
         display: flex;
